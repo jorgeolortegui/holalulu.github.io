@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ffb6c1, #87ceeb, #ffb6c1);
+    background-size: 300% 300%;
+    animation: gradientPulse 15s ease infinite; /* Fondo animado más suave */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cookie {
+    font-size: 120px; /* Galleta más grande */
+    animation: growShrink 1.5s infinite ease-in-out; /* Crece y disminuye */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+p {
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+/* Animación del fondo */
+@keyframes gradientPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animación de la galleta: crecer y disminuir */
+@keyframes growShrink {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.8));
+    }
+    50% {
+        transform: scale(1.4); /* Crece más */
+        filter: drop-shadow(0 0 20px rgba(135, 206, 235, 1));
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.8));
+    }
+}
